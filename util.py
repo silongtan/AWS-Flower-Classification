@@ -1,6 +1,5 @@
 import boto3
 
-
 def upload_file(file_name, bucket):
     """
     Function to upload a file to an S3 bucket
@@ -11,7 +10,6 @@ def upload_file(file_name, bucket):
 
     return response
 
-
 def download_file(file_name, bucket):
     """
     Function to download a given file from an S3 bucket
@@ -21,7 +19,6 @@ def download_file(file_name, bucket):
     s3.Bucket(bucket).download_file(file_name, output)
 
     return output
-
 
 def list_files(bucket):
     """
