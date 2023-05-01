@@ -21,11 +21,14 @@
             <input type=submit value=Upload>
           </form>
         </div>
-    
+        
+        <div>
+          <h3>Classification result of the image:</h3>
+          <p><strong>{{ labels }}</strong></p>
+        </div>
     
         <div>
-          <h3>These are your uploaded files:</h3>
-          <p>Click on the filename to download it.</p>
+          <h3>These are your uploaded files history:</h3>
           <ul>
             {% for item in contents %}
               <li>

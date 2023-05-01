@@ -1,4 +1,5 @@
 import boto3
+import json
 
 def upload_file(file_name, bucket):
     """
@@ -9,6 +10,23 @@ def upload_file(file_name, bucket):
     response = s3_client.upload_file(file_name, bucket, object_name)
 
     return response
+
+def load_labels(file_name, bucket):
+    """
+    Function to load labels of the image
+    """
+    s3 = boto3.resource('s3')
+    json_data = ""
+    # lables = ""
+    try:
+        obj = s3.Object('output-res', f"{file_name}.json")
+        data = obj.get()['Body'].read().decode('utf-8')
+        json_data = json.loads(data)
+        # labels = str(json_data['Labels'])
+    except Exception as e:
+        pass
+
+    return json_data
 
 def download_file(file_name, bucket):
     """
@@ -30,6 +48,10 @@ def list_files(bucket):
         for item in s3.list_objects(Bucket=bucket)['Contents']:
             print(item)
             contents.append(item)
+
+        #for item in s3.list_objects(Bucket="output-res")['Contents']:
+        #    print(item)
+        #    contents.append(item)
     except Exception as e:
         pass
 

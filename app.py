@@ -1,10 +1,12 @@
 import os
 from flask import Flask, render_template, request, redirect, send_file, url_for
-from util import list_files, download_file, upload_file
+from util import list_files, download_file, upload_file, load_labels
+import requests
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
-BUCKET = "insert_bucket_name_here"
+BUCKET = "721final"
+RESULT = "output-res"
 
 @app.route('/')
 def entry_point():
@@ -13,7 +15,8 @@ def entry_point():
 @app.route("/storage")
 def storage():
     contents = list_files(BUCKET)
-    return render_template('storage.html', contents=contents)
+    data_json = ""
+    return render_template('storage.html', contents=contents, labels=data_json)
 
 @app.route("/upload", methods=['POST'])
 def upload():
@@ -22,6 +25,9 @@ def upload():
         f.save(f.filename)
         upload_file(f"{f.filename}", BUCKET)
 
+        data_json = str(load_labels(f"{f.filename}", RESULT))
+        contents = list_files(BUCKET)
+        render_template('storage.html', contents=contents, labels=data_json)
         return redirect("/storage")
 
 @app.route("/download/<filename>", methods=['GET'])
