@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, send_file, url_for
 from util import list_files, download_file, upload_file
-import requests
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
