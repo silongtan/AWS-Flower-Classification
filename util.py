@@ -11,23 +11,6 @@ def upload_file(file_name, bucket):
 
     return response
 
-def load_labels(file_name, bucket):
-    """
-    Function to load labels of the image
-    """
-    s3 = boto3.resource('s3')
-    json_data = ""
-    # lables = ""
-    try:
-        obj = s3.Object('output-res', f"{file_name}.json")
-        data = obj.get()['Body'].read().decode('utf-8')
-        json_data = json.loads(data)
-        # labels = str(json_data['Labels'])
-    except Exception as e:
-        pass
-
-    return json_data
-
 def download_file(file_name, bucket):
     """
     Function to download a given file from an S3 bucket

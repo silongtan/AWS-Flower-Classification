@@ -8,11 +8,10 @@
 
     <div class="content">
 
-        <h3>FlaskDrive: S3 Flask</h3>
+        <h3>FlaskDrive: S3 Flask with AI image classification</h3>
     
         <p>Welcome</p>
-    
-        <h2> {{ msg }}</h2>
+        <p>The classification result can be retreived in S3 Bucket, with the file name image.json</p>
     
         <div>
           <h3>Upload your file here:</h3>
@@ -21,12 +20,7 @@
             <input type=submit value=Upload>
           </form>
         </div>
-        
-        <div>
-          <h3>Classification result of the image:</h3>
-          <p><strong>{{ labels }}</strong></p>
-        </div>
-    
+
         <div>
           <h3>These are your uploaded files history:</h3>
           <ul>
