@@ -88,6 +88,10 @@ Result Bucket
 Result JSON
 <img width="1020" alt="result json" src="https://user-images.githubusercontent.com/70916756/235398339-4fe0f32e-7461-407a-ab29-450019ca17bf.png">
 
+Deployment
+<img width="1220" alt="Screenshot 2023-05-01 at 02 58 47" src="https://user-images.githubusercontent.com/70916756/235420121-1b81ab56-095d-412b-807d-5010dd452cb4.png">
+
+<img width="1215" alt="Screenshot 2023-05-01 at 02 59 06" src="https://user-images.githubusercontent.com/70916756/235420158-28fece03-0df3-45a6-bb1d-0469e802d163.png">
 
 ## Notes
 
