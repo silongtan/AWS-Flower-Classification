@@ -9,7 +9,7 @@ RESULT = "output-res"
 
 @app.route('/')
 def entry_point():
-    return 'Hello World!'
+    return 'Hello!'
 
 @app.route("/storage")
 def storage():
