@@ -70,6 +70,25 @@ flask run
 
 ## Screenshots
 
+Interface
+<img width="565" alt="app interface" src="https://user-images.githubusercontent.com/70916756/235398073-46a265cc-a8e2-4930-bf89-bf5b205b4e39.png">
+
+Uploading Image
+<img width="381" alt="upload" src="https://user-images.githubusercontent.com/70916756/235398110-2c3a2ec1-8d6c-4373-8692-0c2f386eed63.png">
+
+Generate Result JSON
+<img width="452" alt="result" src="https://user-images.githubusercontent.com/70916756/235398182-d0329d4b-0ef1-4584-8743-f960674ff108.png">
+
+Image Bucket
+<img width="1370" alt="image bucket" src="https://user-images.githubusercontent.com/70916756/235398266-916f96fb-c350-405f-b79b-75082bb56138.png">
+
+Result Bucket
+<img width="1149" alt="result bucket" src="https://user-images.githubusercontent.com/70916756/235398298-96ca6316-1b94-40fe-a63c-862e00f2ad98.png">
+
+Result JSON
+<img width="1020" alt="result json" src="https://user-images.githubusercontent.com/70916756/235398339-4fe0f32e-7461-407a-ab29-450019ca17bf.png">
+
+
 ## Notes
 
 - Make sure to properly secure your S3 buckets and restrict access to your Lambda function and SageMaker endpoint.
